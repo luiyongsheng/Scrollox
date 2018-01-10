@@ -1,0 +1,32 @@
+{
+    "name": "Scrollox",
+    "version": "1.0.1",
+    "manifest_version": 2,
+    "description": "An extension made upon Mr. Kanzen Lo's request. :D Have fun.",
+    "homepage_url": "https://www.datasenz.com/luiyongsheng",
+    "background": {
+      "scripts": [
+        "background.js"
+      ],
+      "persistent": true
+    },
+    "browser_action": {
+      "default_icon": "img/mouse.png",
+      "default_title": ""
+    },
+    "icons": {
+      "128": "img/128.png",
+      "48": "img/48.png"
+    },
+    "content_scripts": [{
+        "all_frames":true,
+        "js":["inject.js"],
+        "run_at": "document_start",
+        "matches": [ "*://*/*" ]
+    }],
+    "permissions": [
+      "https://*/*",
+      "http://*/*",
+      "tabs"
+    ]
+  }
